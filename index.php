@@ -1,7 +1,7 @@
 <html>
 	<head>
-		<title>My Drive - Google Drive</title>
-		<link rel="icon" href="https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_4.ico">
+		<title>JMS Unoffical Proxy!</title>
+		<link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/face-with-stuck-out-tongue_1f61b.png">
 	</head>
 </html>
 
