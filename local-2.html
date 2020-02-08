@@ -60,7 +60,7 @@
         $('nu-box').onsubmit = function() {
           var url = $('url').value;
           //this is the URL for the server
-          window.location.href = `node/proxy/${url}`;
+          window.location.href = `http://jms-unofficial-node.herokuapp.com/textbooks/${url}`;
           return false;
         };
         window.onload = function() {
@@ -71,9 +71,9 @@
           let key;
           let current;
           async function fetchDetails() {
-            key = await fetch('muun/apikey')
+            key = await fetch('https://jms-unofficial-muun.herokuapp.com/apikey')
                .then((res) => res.json());
-            current = await fetch('muun/currenturl')
+            current = await fetch('https://jms-unofficial-muun.herokuapp.com/currenturl')
               .then((res) => res.json());
           }
           fetchDetails();
@@ -86,7 +86,7 @@
             //this is the URL for the server
             //mun.suncolor.live/get?url=
             //window.location.href = `https://${current.url}/?key=${key.key}&ref=${url}&from=TitaniumNetwork`;
-            window.location.href = `muun/get?url=${url}`;
+            window.location.href = `https://jms-unofficial-muun.herokuapp.com/get?url=${url}`;
             return false;
           };
           window.onload = function() {
