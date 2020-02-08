@@ -1,0 +1,48 @@
+<html lang="en"><head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title>JMS Unofficial Proxy!</title>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/face-with-stuck-out-tongue_1f61b.png">
+  </head>
+  <body>
+      <div class="container">
+      <div class="c-box mainbody">
+      <center>
+        <h2>JMS Unofficial Proxy!</h2>
+      </center>
+	  <center>
+          <form action="" method="get" id="web-search-box" style="transform:scale(1.1)">
+            <p>
+              <input type="text" placeholder="example.edu" style="border:solid;border-radius: 5px;padding:8px;border-color:#704ea0;" id="url" name="url">&nbsp;
+              <input type="submit" style="border:none;border-radius: 5px;padding:10px;width:40px;background:#704ea0;color:#fff;font-weight:bold;" value="GO">
+            </p>
+          </form>
+      </center>
+      <br />
+	  <center>
+        <p>Were you ever browsing NASA, and you clicked on a link, for it to be blocked?</p>
+		<p>Are you secretly using Scratch?</p>
+		<p>Were you looking for an EV3 project, but it was blocked because legos?</p>
+		<p><b>If you answered yes to any of these, this is for <i>you!</i></b></p>
+      </center>
+    </div>
+    <script>
+      function $(id) {
+        return document.getElementById(id);
+      }
+      $('web-search-box').onsubmit = function() {
+        var url = $('url').value;
+        //this is the URL for the server
+        window.location.href = `cd182/index.php?cdURL=${url}`;
+        return false;
+      };
+      window.onload = function() {
+        $('url').focus();
+      }
+    </script>
+  </div>
+        
+        
+
+</body></html>

@@ -1,0 +1,26 @@
+{
+        "name": "titaniumnetwork-dev/phoenix-reborn",
+        "type": "project",
+        "license": "MIT",
+        "description": "Web proxy application project powered by PHP-Proxy library",
+        "keywords": ["php proxy application", "php proxy web", "proxy script", "php web proxy", "web proxy"],
+        "repositories": [
+                {
+                        "type": "vcs",
+                        "url": "https://github.com/titaniumnetwork-dev/php-proxy"
+                }
+        ],
+        "require": {
+                "athlon1600/php-proxy": "dev-master",
+                "athlon1600/php-proxy-plugin-bundle": "dev-master",
+                "ext-mbstring": "^7.2",
+                "ext-gd": "^7.2",
+                "ext-sqlite3": "^7.2",
+                "ext-imagick": "*"
+        },
+        "scripts": {
+                "post-create-project-cmd": [
+                        "php -f setup.txt"
+                ]
+        }
+}
