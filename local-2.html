@@ -29,13 +29,6 @@
             </p>
           </form>
 		  </td>
-		  <td>
-		  <form action="" method="get" id="ms-box">
-            <p>
-              <input type="submit" style="border:none;border-radius: 5px;padding:10px;width:40px;background:#704ea0;color:#fff;font-weight:bold;" value="MS">
-            </p>
-          </form>
-		  </td>
 		  </tr>
 		  </table>
       </center>
@@ -75,32 +68,6 @@
           $('url').focus();
         }
     </script>
-	<script>
-          let key;
-          let current;
-          async function fetchDetails() {
-            key = await fetch('https://jms-unofficial-muun.herokuapp.com/apikey')
-               .then((res) => res.json());
-            current = await fetch('https://jms-unofficial-muun.herokuapp.com/currenturl')
-              .then((res) => res.json());
-          }
-          fetchDetails();
-
-          function $(id) {
-            return document.getElementById(id);
-          }
-          $('ms-box').onsubmit = function() {
-            var url = $('url').value;
-            //this is the URL for the server
-            //mun.suncolor.live/get?url=
-            //window.location.href = `https://${current.url}/?key=${key.key}&ref=${url}&from=TitaniumNetwork`;
-            window.location.href = `https://jms-unofficial-muun.herokuapp.com/get?url=${url}`;
-            return false;
-          };
-          window.onload = function() {
-            $('url').focus();
-          }
-        </script>
   </div>
         
         
