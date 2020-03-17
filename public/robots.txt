@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /textbooks/http
+Disallow: /textbooks/http:
+Disallow: /textbooks/http:/
+Disallow: /textbooks/https
+Disallow: /textbooks/https:
+Disallow: /textbooks/https:/
