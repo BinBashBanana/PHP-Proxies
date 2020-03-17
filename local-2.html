@@ -34,10 +34,7 @@
       </center>
       <br />
 	  <center>
-        <p>Were you ever browsing NASA, and you clicked on a link, for it to be blocked?</p>
-		<p>Are you secretly using Scratch?</p>
-		<p>Were you looking for an EV3 project, but it was blocked because legos?</p>
-		<p><b>If you answered yes to any of these, this is for <i>you!</i></b></p>
+        <p>Enter a URL above, choose a proxy, and watch the magic!</p>
       </center>
     </div>
     <script>
@@ -61,7 +58,7 @@
         $('nu-box').onsubmit = function() {
           var url = $('url').value;
           //this is the URL for the server
-          window.location.href = `http://jms-unofficial-node.herokuapp.com/textbooks/${url}`;
+          window.location.href = `https://alive-brand-contain.herokuapp.com/textbooks/${url}`;
           return false;
         };
         window.onload = function() {
