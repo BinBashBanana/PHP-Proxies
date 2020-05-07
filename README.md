@@ -1,4 +1,6 @@
-# EduProxy
+# PHP-Proxies
 
+Some proxies written in PHP
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BinBashBanana/EduProxy_qweundz)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BinBashBanana/PHP-Proxies)
+

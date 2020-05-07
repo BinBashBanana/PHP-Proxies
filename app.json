@@ -1,7 +1,6 @@
 {
-  "name": "JMS Unofficial Proxy",
-  "description": "A tiny proxy for when NASA is blocked",
-  "repository": "https://github.com/BinBashBanana/EduProxy_qweundz",
-  "logo": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/face-with-stuck-out-tongue_1f61b.png",
-  "keywords": ["education"]
+  "name": "PHP-Proxies",
+  "description": "Proxies in PHP",
+  "repository": "https://github.com/BinBashBanana/PHP-Proxies",
+  "logo": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/face-with-stuck-out-tongue_1f61b.png"
 }
