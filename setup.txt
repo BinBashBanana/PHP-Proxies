@@ -11,7 +11,7 @@ function generate_random_key(){
 	return md5($random);
 }
 
-$path_config = './config.php';
+$path_config = './geographic/config.php';
 
 // config.php won't be writable if ran from within web server
 if(!is_writable($path_config)){
