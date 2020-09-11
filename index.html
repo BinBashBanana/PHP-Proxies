@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>PHP Proxies</title>
     <style>
-      .pform {
+      #pform {
       margin: 40px;
       }
-      .textbox {
+      #pform input[type="text"] {
       padding: 6px 5px 5px 5px;
-	  width: 300px;
+      width: 300px;
       }
-      .pbn {
+      #pform input[type="button"] {
       padding: 6px 7px 5px 7px;
       }
     </style>
+	<script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var url = document.getElementById('url');
+        var pform = document.getElementById('pform');
+        
+        url.focus();
+        
+        document.getElementById('cd').addEventListener('click', function() {
+          window.location.href = './geography/worldsearch.php?searchp=' + url.value;
+        }, false);
+
+        document.getElementById('pp').addEventListener('click', function() {
+          pform.submit();
+        }, false);
+        
+        pform.addEventListener('keydown', function(e) {
+          if (e.key == 'Enter') {
+            e.preventDefault();
+          }
+        }, false);
+      }, false);
+    </script>
   </head>
   <body>
     <div>
-      <form action="geographic/index.php" id="pform" method="post" class="pform" onkeydown="return event.key != 'Enter';">
-        <input type="text" class="textbox" placeholder="Enter URL" id="url" name="url" spellcheck="false">&#8202;
-        <input type="button" class="pbn" value="CensorDodge" id="cd">&#8202;
+      <form action="./geographic/index.php" id="pform" method="post">
+        <input type="text" class="textbox" placeholder="Enter URL" id="url" name="url" spellcheck="false">
+        <input type="button" class="pbn" value="CensorDodge" id="cd">
         <input type="button" class="pbn" value="PHP-Proxy" id="pp">
       </form>
     </div>
-    <script>
-      function $(id) {
-        return document.getElementById(id);
-      };
-	  
-	  $('pp').onclick = function() {
-        document.getElementById("pform").submit();
-      };
-	  
-      $('cd').onclick = function() {
-        var url = $('url').value;
-        //this is the URL for the server
-        window.location.href = `geography/worldsearch.php?searchp=${url}`;
-        return false;
-      };
-	  window.onload = function() {
-		$('url').focus();
-	  }
-    </script>
   </body>
 </html>
