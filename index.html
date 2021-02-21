@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PHP Proxies</title>
-    <style>
-      #pform {
-      margin: 40px;
-      }
-      #pform input[type="text"] {
-      padding: 6px 5px 5px 5px;
-      width: 300px;
-      }
-      #pform input[type="button"] {
-      padding: 6px 7px 5px 7px;
-      }
-    </style>
-	<script>
-      window.addEventListener('DOMContentLoaded', function() {
-        var url = document.getElementById('url');
-        var pform = document.getElementById('pform');
-        
-        url.focus();
-        
-        document.getElementById('cd').addEventListener('click', function() {
-          window.location.href = './geography/worldsearch.php?searchp=' + url.value;
-        }, false);
+	<head>
+		<title>PHP Proxies</title>
+		<style>
+			input {
+				padding: 5px;
+			}
+			input[type="text"] {
+				width: 300px;
+			}
+		</style>
+		<script>
+			window.addEventListener("DOMContentLoaded", function() {
+				var url = document.getElementById("url");
+				
+				document.getElementById("cd").addEventListener("click", function() {
+					window.location.href = "./geography/?q=" + url.value;
+				}, false);
 
-        document.getElementById('pp').addEventListener('click', function() {
-          pform.submit();
-        }, false);
-        
-        pform.addEventListener('keydown', function(e) {
-          if (e.key == 'Enter') {
-            e.preventDefault();
-          }
-        }, false);
-      }, false);
-    </script>
-  </head>
-  <body>
-    <div>
-      <form action="./geographic/index.php" id="pform" method="post">
-        <input type="text" class="textbox" placeholder="Enter URL" id="url" name="url" spellcheck="false">
-        <input type="button" class="pbn" value="CensorDodge" id="cd">
-        <input type="button" class="pbn" value="PHP-Proxy" id="pp">
-      </form>
-    </div>
-  </body>
+				document.getElementById("pp").addEventListener("click", function() {
+					window.location.href = "./geographic/?q=" + url.value;
+				}, false);
+			}, false);
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="text" placeholder="URL" id="url" spellcheck="false" autofocus>
+			<input type="button" value="CensorDodge" id="cd">
+			<input type="button" value="PHP-Proxy" id="pp">
+		</div>
+	</body>
 </html>

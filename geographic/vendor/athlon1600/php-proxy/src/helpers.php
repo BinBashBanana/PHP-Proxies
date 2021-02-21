@@ -180,7 +180,8 @@ function proxify_url($url, $base_url = ''){
 		$url = rel2abs($url, $base_url);
 	}
 	
-	return app_url().'?q='.url_encrypt($url);
+	// NO ENCODING
+	return app_url().'?q='.$url;
 }
 
 function rel2abs($rel, $base)

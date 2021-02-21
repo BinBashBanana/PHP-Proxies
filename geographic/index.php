@@ -35,34 +35,11 @@ if (Config::get('url_mode') == 2) {
 // very important!!! otherwise requests are queued while waiting for session file to be unlocked
 session_write_close();
 
-// form submit in progress...
-if (isset($_POST['url'])) {
-
-    $url = $_POST['url'];
-    $url = add_http($url);
-
-    header("HTTP/1.1 302 Found");
-    header('Location: ' . proxify_url($url));
-    exit;
-
-} elseif (!isset($_GET['q'])) {
-
-    // must be at homepage - should we redirect somewhere else?
-    if (Config::get('index_redirect')) {
-
-        // redirect to...
-        header("HTTP/1.1 302 Found");
-        header("Location: " . Config::get('index_redirect'));
-
-    } else {
-        echo render_template("./templates/main.php", array('version' => Proxy::VERSION));
-    }
-
-    exit;
-}
+// we don't even need this code chunk anymore, bye
 
 // decode q parameter to get the real URL
-$url = url_decrypt($_GET['q']);
+// just kidding, I removed encoding
+$url = $_GET['q'];
 
 $proxy = new Proxy();
 
